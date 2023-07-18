@@ -12,11 +12,11 @@ This is a Python application that allows users to draw polygons on a canvas, cal
 
 1. Clone or download this repository `git clone https://github.com/vercah/computational-geometry.git`
 2. Go to the project directory `cd computational-geometry`
-3. Install the libraries, if needed `pip install shapely`, `pip install tkinter`
+3. Install the libraries, if needed `pip install shapely`, `apt-get install python-tk` (you might need `sudo`)
 
 ## Usage
 
-1. Run the application from the terminal `python geometry.py`
+1. Run the application from the terminal `python3 geometry.py`
 2. Clicking into the white plane, you can manually insert points
 3. Then you can calculate the area of the polygon (in case it is a simple one), wrap the points into a convex container, or divide it into convex subpolygons
 4. You can also generate 50 random points, but they most probably won't form a simple polygon, so you can only wrap them
