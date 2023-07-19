@@ -85,6 +85,10 @@ def triangle_area(triangle):
     area = 0.5 * abs((x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2))) # shoelace formula
     return area
 
+def draw_triangle(triangle, canvas):
+    canvas.create_line(triangle[0], triangle[1], fill="red")
+    canvas.create_line(triangle[1], triangle[2], fill="red")
+    canvas.create_line(triangle[2], triangle[0], fill="red")
 
 # drawing
 
@@ -214,10 +218,12 @@ def calculate_area(points, canvas, calculate_button, wrap_button, divide_button,
             output_text.insert(tk.END, text)
             return
     triangles = triangulate_polygon(points)
+    for triangle in triangles:
+        draw_triangle(triangle, canvas)
     area = sum_triangles(triangles)
     text = "Area of this polygon is " + str(area) + " square pixels."
     output_text.insert(tk.END, text)
-
+    
 def find_wrapping(points, calculate_button, canvas):
     get_wrapping(points, canvas)
     calculate_button.config(state=tk.DISABLED)
