@@ -24,7 +24,7 @@ This is a Python application that allows users to draw polygons on a canvas, cal
 ## Brief description of the methods
 
 ### Computing area of a simple polygon
-The program first checks in which direction (clockwise or counterclockwise) the polygon was created. It then uses the ear-clipping method to triangulate the polygon. It proceeds on triplets of points, trying to form a new line between the margin points. For each new triplet, it checks if the middle point is on the right side of the line (using a vector cross-product). It further verifies that the new line does not intersect with the rest of the polygon and that it is inside the polygon. Then, it sums the areas of the obtained triangles."
+The program first checks in which direction (clockwise or counterclockwise) the polygon was created. It then uses the ear-clipping method to triangulate the polygon. It proceeds on triplets of points, trying to form a new line between the margin points. For each new triplet, it checks if the middle point is on the right side of the line (using a vector cross-product). It further verifies that the new line does not intersect with the rest of the polygon and that it is inside the polygon. Then, it sums the areas of the obtained triangles.
 
 ### Finding the smallest wrapping
 The program uses the incremental algorithm. It goes through the points ordered by their x-coordinate (left to right) and tries to connect the sorted points. It checks whether the line bends to the right with each new point. This process creates the upper wrapping. Then it does the same for the lower part and finally draws the wrapping around the points.
